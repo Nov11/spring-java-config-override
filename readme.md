@@ -10,3 +10,4 @@ config will execute once. Override function will not run.
 to satisfy every needs of a bean creation. When definition sits in a config file, the config bean is 
 created.
 7. @Bean in parent config will be invoked after child config is fully initialized.
+8. @Bean method searching can be placed as dfs searching from child config and stops at the first possible matching. 
