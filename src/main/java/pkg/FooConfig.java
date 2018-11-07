@@ -22,4 +22,8 @@ public class FooConfig {
     public AbcService abcService() {
         return new AbcService();
     }
+
+    public FooConfig() {
+        logger.info("foo config ctor");
+    }
 }

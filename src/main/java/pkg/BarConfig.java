@@ -21,4 +21,11 @@ public class BarConfig {
         logger.warn("fooService bar config");
         return new FooService();
     }
+
+    @Autowired
+    ChildField childField;
+
+    public BarConfig() {
+        logger.info("bar config ctor");
+    }
 }
