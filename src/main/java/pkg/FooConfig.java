@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
-@Lazy
+//@Lazy
 @Configuration
 @ComponentScan
 public class FooConfig {

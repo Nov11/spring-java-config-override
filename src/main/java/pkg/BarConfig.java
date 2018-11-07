@@ -10,9 +10,13 @@ import org.springframework.context.annotation.Lazy;
 
 @Configuration
 @Import({FooConfig.class,})
-@Lazy
+//@Lazy
 public class BarConfig {
     static Logger logger = LoggerFactory.getLogger(BarConfig.class);
+
+    @Autowired
+    ChildField childField;
+
     @Autowired
     AbcService abc;
 
@@ -21,9 +25,6 @@ public class BarConfig {
         logger.warn("fooService bar config");
         return new FooService();
     }
-
-    @Autowired
-    ChildField childField;
 
     public BarConfig() {
         logger.info("bar config ctor");
