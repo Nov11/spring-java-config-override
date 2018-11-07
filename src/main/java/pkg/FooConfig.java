@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 
 //@Lazy
 @Configuration
@@ -25,5 +24,10 @@ public class FooConfig {
 
     public FooConfig() {
         logger.info("foo config ctor");
+    }
+
+    @Bean
+    ParentField parentField() {
+        return new ParentField();
     }
 }

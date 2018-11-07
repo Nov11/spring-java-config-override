@@ -9,3 +9,4 @@ config will execute once. Override function will not run.
 6. When eagerly creating beans, config file's @Autowire fields will be init first. Control flows 
 to satisfy every needs of a bean creation. When definition sits in a config file, the config bean is 
 created.
+7. @Bean in parent config will be invoked after child config is fully initialized.
